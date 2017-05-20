@@ -13,13 +13,24 @@
 <body>
 
 <!-- INTRO -->
+<div><img src='http://4.bp.blogspot.com/-ChABEVAFG3w/Tw3-7Nb0NwI/AAAAAAAABok/_1DXjiBejgY/s1600/junk%2Bdrawer%2B006.JPG' /></div>
 <div>The OSGeo<em> miscellaneous drawer</em></div>
 <div>hi! i'm <em>@geografa</em></div>
 <div>support engineer <em>@mapbox</em></div>
 <div><em>mapbox is:</em> platform to <em>design &amp; build</em> maps</div>
 
 <!-- START PRESENTATION -->
-<div><img src='http://4.bp.blogspot.com/-ChABEVAFG3w/Tw3-7Nb0NwI/AAAAAAAABok/_1DXjiBejgY/s1600/junk%2Bdrawer%2B006.JPG' /></div>
+<div class="">
+  <ul>
+    <li>Overview of tools</li>
+    <li>Demos</li>
+    <li>30 minute pairing/sharing</li>
+  </ul>
+</div>
+<div class="">
+  <img src="http://3.bp.blogspot.com/-9ThmNeLbI0w/TaRxgFQ8NRI/AAAAAAAACyw/tuHqymju-EQ/s1600/49-the-smiths.jpg" alt="stop me">
+</div>
+
 <div>Developer's miscellaneous drawer<br></div>
 <div>Create and Edit</div>
 <div>Preview</div>
@@ -64,7 +75,7 @@
 </div>
 
 <div class="">
-  mbview
+  <a target="_blank" href="https://github.com/mapbox/mbview/">mbview</a>
 </div>
 
 <div class="">
@@ -72,7 +83,7 @@
 </div>
 
 <div class="">
-  <a target="_blank" href="jsbin.com">jsbin.com</a>
+  <a target="_blank" href="http://jsbin.com/?html,output">jsbin.com</a>
 </div>
 
 <!-- validation tools -->
@@ -93,12 +104,20 @@
   <a target="_blank" href="http://gdal.org/">GDAL</a> a translator library for raster and vector geospatial data formats.
 </div>
 
+
+<div class="">
+  <a target="_blank" href="http://gdal.org/ogrinfo.html">OGR</a>
+</div>
+
 <div class="">
   <a target="_blank" href="https://github.com/dwtkns/gdal-cheat-sheet">GDAL Cheat Sheet</a>
 </div>
 
 <div class="">
   <pre>gdalwarp -s_srs "EPSG:4326" -t_srs "EPSG:3857" image.tif image2.tif</pre>
+</div>
+
+<div class="">
   <pre>ogr2ogr output.shp -t_srs "EPSG:4326" input.shp</pre>
 </div>
 
@@ -115,7 +134,7 @@
 </div>
 
 <div class="">
-  fio
+  <a href="https://pypi.python.org/pypi/Fiona/">Fiona (fio)</a>
 </div>
 
 <div class="">
@@ -123,15 +142,43 @@
 </div>
 
 <div class="">
-  rio
+  <a href="https://mapbox.github.io/rasterio/index.html">Rasterio (rio)</a>
 </div>
 
 <div class="">
-  <a target="_blank" href="http://gdal.org/ogrinfo.html">OGR</a>
+  <pre>rio info input.tif</pre>
 </div>
+
+<div class="">
+  <pre>rio bounds input.tif | geojsonio</pre>
+</div>
+
 
 <div class="">
   <a target="_blank" href="https://github.com/mapbox/tippecanoe">Tippecanoe</a>
+</div>
+
+<div class="">
+  <pre>tippecanoe -o file.mbtiles [file.json ...]</pre>
+</div>
+
+<div class="">
+  Parameters:
+  <ul>
+    <li>layer name</li>
+    <li>min and max zooms</li>
+    <li>guess best zooom level</li>
+    <li>tile resolution</li>
+    <li>filter feature attributes</li>
+  </ul>
+</div>
+
+<div class="">
+  <pre>tippecanoe -o alameda.mbtiles -l alameda -n "Alameda CO" -z13 roads.json</pre>
+</div>
+
+<div class="">
+  <pre>tippecanoe-decode file.mbtiles</pre>
 </div>
 
 <div class="">
@@ -140,40 +187,6 @@
 
 <div class="">
   <pre>togeojson file.kml > file.geojson</pre>
-</div>
-
-<div class="">
-  <a target="_blank" href="https://mapbox.github.io/rasterio/">Rasterio</a>
-</div>
-
-<div class="">
-  <pre>rio info input.tif</pre>
-</div>
-
-<div class="">
-  rio bounds input.tif | geojsonio
-</div>
-
-<div class="">
-  Commands:
-  bounds     Write bounding boxes to stdout as GeoJSON.
-  calc       Raster data calculator.
-  clip       Clip a raster to given bounds.
-  convert    Copy and convert raster dataset.
-  edit-info  Edit dataset metadata.
-  env        Print information about the rio environment.
-  info       Print information about a data file.
-  insp       Open a data file and start an interpreter.
-  mask       Mask in raster using features.
-  merge      Merge a stack of raster datasets.
-  overview   Construct overviews in an existing dataset.
-  rasterize  Rasterize features.
-  sample     Sample a dataset.
-  shapes     Write shapes extracted from bands or masks.
-  stack      Stack a number of bands into a multiband dataset.
-  transform  Transform coordinates.
-  warp       Warp a raster dataset.
-
 </div>
 
 <!-- helpers -->
@@ -218,19 +231,15 @@
 </div>
 
 <div class="">
-  `copy(map.getCenter('features').lng + ',' + map.getCenter('features').lat)`
+  <pre>copy(map.getCenter('features').lng + ',' + map.getCenter('features').lat)</pre>
 </div>
 
 <div class="">
-  copy(map.getZoom())
+  <pre>copy(map.getZoom())</pre>
 </div>
 
 <div class="">
-  tilejson endpoints
-</div>
-
-<div class="">
-
+  <a href="https://api.mapbox.com/v4/grafa.iih2e33n.json?access_token=pk.eyJ1IjoiZ3JhZmEiLCJhIjoiY2oydGJoajI5MDA1bjJxbzZzZjd5MXl3NSJ9.vNVFm6NsFzeX0AGSjFHpqg">Tilejson endpoints</a>
 </div>
 
 <!-- console commands -->
@@ -238,16 +247,22 @@
   console.trace();
 </div>
 
-<!-- git  -->
-
 <div class="">
-  configuring your terminal
+  <a href="https://github.com/mpetroff/print-maps">Print maps</a>
 </div>
 
+
+
 <!-- OUTRO -->
+<div class="">
+  Now it's your turn
+</div>
+
 <div>thank <em>you.</em></div>
 <div>happy <em>mapping!</em></div>
-<div><em>@amyleew</em><br> designer <br><em>@mapbox</em></div>
+<div><em>@geografa</em><br><em>@mapbox</em></div>
+
+
 <!-- THE END -->
 
 
