@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The OSGeo miscellaneous drawer</title>
+    <meta charset='utf-8'>
+    <meta property="og:title" content="The OSGeo miscellaneous drawer"/>
+    <meta property="og:description" content="The OSGeo miscellaneous drawer by Rafa Gutierrez"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link href='big.css' rel='stylesheet' type='text/css' />
+    <script src='big.js'></script>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div>The OSGeo<em> miscellaneous drawer</em></div>
+<div>hi! i'm <em>@geografa</em></div>
+<div>support engineer <em>@mapbox</em></div>
+<div><em>mapbox is:</em> platform to <em>design &amp; build</em> maps</div>
+
+<!-- START PRESENTATION -->
+<div><img src='http://4.bp.blogspot.com/-ChABEVAFG3w/Tw3-7Nb0NwI/AAAAAAAABok/_1DXjiBejgY/s1600/junk%2Bdrawer%2B006.JPG' /></div>
+<div>Developer's miscellaneous drawer<br></div>
+<div>Create and Edit</div>
+<div>Preview</div>
+<div>Validate</div>
+<div>Convert</div>
+<div>Helpers</div>
+
+<div>Developer's miscellaneous drawer:<br>
+<ul>
+  <li>Create and Edit</li>
+  <li>Preview</li>
+  <li>Validate</li>
+  <li>Convert</li>
+  <li>Helpers</li>
+</ul>
+</div>
+
+<!-- create and edit tool -->
+<div class="">
+  Editing tools
+</div>
+
+<div class="">
+  QGIS
+</div>
+
+<div class="">
+  <img src="https://cloud.githubusercontent.com/assets/134753/26271004/6d826f70-3cb5-11e7-8c75-270276d3e298.png" alt="qgis">
+</div>
+
+<div class="">
+  <a target="_blank" href="http://geojson.io/#map=2/20.0/0.0">geojson.io</a>
+</div>
+
+<div class="">
+  <img src="https://cloud.githubusercontent.com/assets/134753/26270928/64cd4c7a-3cb4-11e7-9a78-7618b8e6d3b4.png" alt="geojsonio">
+</div>
+
+<!-- Preview -->
+<div class="">
+  <a target="_blank" href="https://github.com/mapbox/geojsonio-cli">geojsonio-cli</a>
+</div>
+
+<div class="">
+  mbview
+</div>
+
+<div class="">
+  <a target="_blank" href="https://www.mapbox.com/api-playground/#/?_k=3j43xb">API Playground</a>
+</div>
+
+<div class="">
+  <a target="_blank" href="jsbin.com">jsbin.com</a>
+</div>
+
+<!-- validation tools -->
+<div>Validation tools</div>
+
+<div>geojsonhint</div>
+<div><a target="_blank" href="https://www.mapbox.com/geojsonhint/">geojsonhint</a>: validate geojson objects against the specification</div>
+
+<div>geojsonlint</div>
+<div><a target="_blank" href="http://geojsonlint.com/">geojsonlint</a>: a server side implementation</div>
+
+<!-- conversion utilities -->
+<div class="">
+  Conversion utilities
+</div>
+
+<div class="">
+  <a target="_blank" href="http://gdal.org/">GDAL</a> a translator library for raster and vector geospatial data formats.
+</div>
+
+<div class="">
+  <a target="_blank" href="https://github.com/dwtkns/gdal-cheat-sheet">GDAL Cheat Sheet</a>
+</div>
+
+<div class="">
+  <pre>gdalwarp -s_srs "EPSG:4326" -t_srs "EPSG:3857" image.tif image2.tif</pre>
+  <pre>ogr2ogr output.shp -t_srs "EPSG:4326" input.shp</pre>
+</div>
+
+<div class="">
+  <pre>gdal_translate -of GTiff -a_nodata none image.tif image2.tif</pre>
+</div>
+
+<div class="">
+  extract GeoJSON from a Esri REST API
+</div>
+
+<div class="">
+  ogr2ogr -f GeoJSON output.geojson "http:/example.com/arcgis/rest/services/SERVICE/LAYER/MapServer/0/query?f=json&returnGeometry=true&etc=..." OGRGeoJSON
+</div>
+
+<div class="">
+  fio
+</div>
+
+<div class="">
+  <pre>fio info soccer-centroids.shp --count</pre>
+</div>
+
+<div class="">
+  rio
+</div>
+
+<div class="">
+  <a target="_blank" href="http://gdal.org/ogrinfo.html">OGR</a>
+</div>
+
+<div class="">
+  <a target="_blank" href="https://github.com/mapbox/tippecanoe">Tippecanoe</a>
+</div>
+
+<div class="">
+  <a target="_blank" href="https://github.com/mapbox/togeojson">togeojson</a>
+</div>
+
+<div class="">
+  <pre>togeojson file.kml > file.geojson</pre>
+</div>
+
+<div class="">
+  <a target="_blank" href="https://mapbox.github.io/rasterio/">Rasterio</a>
+</div>
+
+<div class="">
+  <pre>rio info input.tif</pre>
+</div>
+
+<div class="">
+  rio bounds input.tif | geojsonio
+</div>
+
+<div class="">
+  Commands:
+  bounds     Write bounding boxes to stdout as GeoJSON.
+  calc       Raster data calculator.
+  clip       Clip a raster to given bounds.
+  convert    Copy and convert raster dataset.
+  edit-info  Edit dataset metadata.
+  env        Print information about the rio environment.
+  info       Print information about a data file.
+  insp       Open a data file and start an interpreter.
+  mask       Mask in raster using features.
+  merge      Merge a stack of raster datasets.
+  overview   Construct overviews in an existing dataset.
+  rasterize  Rasterize features.
+  sample     Sample a dataset.
+  shapes     Write shapes extracted from bands or masks.
+  stack      Stack a number of bands into a multiband dataset.
+  transform  Transform coordinates.
+  warp       Warp a raster dataset.
+
+</div>
+
+<!-- helpers -->
+<div class="">
+  Helpers
+</div>
+
+<div class="">
+  git
+</div>
+
+<div class="">
+  Bash prompts: http://beckism.com/2009/02/better_bash_prompt/
+</div>
+
+<div class="">
+  <a target="_blank" href="https://github.com/mapbox/geojson-tidy">geojson-tidy</a> Filter out noisy points from an input geojson lineString
+</div>
+
+<div class="">
+  <img src="https://cloud.githubusercontent.com/assets/126868/8111925/96012394-1032-11e5-9e9e-069746f4dcc9.gif" alt="geojsontidy">
+</div>
+
+<div class="">
+  <a href="https://stedolan.github.io/jq/">jq</a>
+</div>
+
+<div class="">
+  <pre>jq '.features[].properties.name' pizza.geojson</pre>
+</div>
+
+<div class="">
+  <a href="https://www.npmjs.com/package/turf-cli">turf-cli</a>
+</div>
+
+<div class="">
+  <pre>turf random points 1000 {} > randompoints.geojson</pre>
+</div>
+<!-- Mapbox commands -->
+<div class="">
+  Mapbox commands
+</div>
+
+<div class="">
+  `copy(map.getCenter('features').lng + ',' + map.getCenter('features').lat)`
+</div>
+
+<div class="">
+  copy(map.getZoom())
+</div>
+
+<div class="">
+  tilejson endpoints
+</div>
+
+<div class="">
+
+</div>
+
+<!-- console commands -->
+<div class="">
+  console.trace();
+</div>
+
+<!-- git  -->
+
+<div class="">
+  configuring your terminal
+</div>
+
+<!-- OUTRO -->
+<div>thank <em>you.</em></div>
+<div>happy <em>mapping!</em></div>
+<div><em>@amyleew</em><br> designer <br><em>@mapbox</em></div>
+<!-- THE END -->
+
+
+
+
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4e36eb1ef5a1f53d6f000001');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
